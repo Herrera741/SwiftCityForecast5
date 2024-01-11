@@ -14,6 +14,8 @@
 		B4845A7D2B4F606F00E8FE55 /* SwiftCityForecast5Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4845A7C2B4F606F00E8FE55 /* SwiftCityForecast5Tests.swift */; };
 		B4845A872B4F606F00E8FE55 /* SwiftCityForecast5UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4845A862B4F606F00E8FE55 /* SwiftCityForecast5UITests.swift */; };
 		B4845A892B4F606F00E8FE55 /* SwiftCityForecast5UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4845A882B4F606F00E8FE55 /* SwiftCityForecast5UITestsLaunchTests.swift */; };
+		B4845AA02B4F802E00E8FE55 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4845A9F2B4F802E00E8FE55 /* BackgroundView.swift */; };
+		B4845AA22B4F8B7200E8FE55 /* SingleDayForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4845AA12B4F8B7200E8FE55 /* SingleDayForecastView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		B4845A822B4F606F00E8FE55 /* SwiftCityForecast5UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftCityForecast5UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4845A862B4F606F00E8FE55 /* SwiftCityForecast5UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftCityForecast5UITests.swift; sourceTree = "<group>"; };
 		B4845A882B4F606F00E8FE55 /* SwiftCityForecast5UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftCityForecast5UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B4845A9F2B4F802E00E8FE55 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		B4845AA12B4F8B7200E8FE55 /* SingleDayForecastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleDayForecastView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +167,7 @@
 		B4845A992B4F662C00E8FE55 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				B4845A9F2B4F802E00E8FE55 /* BackgroundView.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -187,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				B4845A6D2B4F606C00E8FE55 /* ForecastView.swift */,
+				B4845AA12B4F8B7200E8FE55 /* SingleDayForecastView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -321,6 +327,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4845AA22B4F8B7200E8FE55 /* SingleDayForecastView.swift in Sources */,
+				B4845AA02B4F802E00E8FE55 /* BackgroundView.swift in Sources */,
 				B4845A6E2B4F606C00E8FE55 /* ForecastView.swift in Sources */,
 				B4845A6C2B4F606C00E8FE55 /* SwiftCityForecast5App.swift in Sources */,
 			);
