@@ -170,17 +170,17 @@
 		B4845A9A2B4F664400E8FE55 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				B4845A9B2B4F671A00E8FE55 /* Weather */,
+				B4845A9B2B4F671A00E8FE55 /* Forecast */,
 			);
 			path = Features;
 			sourceTree = "<group>";
 		};
-		B4845A9B2B4F671A00E8FE55 /* Weather */ = {
+		B4845A9B2B4F671A00E8FE55 /* Forecast */ = {
 			isa = PBXGroup;
 			children = (
 				B4845A9D2B4F673900E8FE55 /* View */,
 			);
-			path = Weather;
+			path = Forecast;
 			sourceTree = "<group>";
 		};
 		B4845A9D2B4F673900E8FE55 /* View */ = {
