@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B4845A6C2B4F606C00E8FE55 /* SwiftCityForecast5App.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4845A6B2B4F606C00E8FE55 /* SwiftCityForecast5App.swift */; };
-		B4845A6E2B4F606C00E8FE55 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4845A6D2B4F606C00E8FE55 /* ContentView.swift */; };
+		B4845A6E2B4F606C00E8FE55 /* ForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4845A6D2B4F606C00E8FE55 /* ForecastView.swift */; };
 		B4845A702B4F606F00E8FE55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4845A6F2B4F606F00E8FE55 /* Assets.xcassets */; };
 		B4845A732B4F606F00E8FE55 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4845A722B4F606F00E8FE55 /* Preview Assets.xcassets */; };
 		B4845A7D2B4F606F00E8FE55 /* SwiftCityForecast5Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4845A7C2B4F606F00E8FE55 /* SwiftCityForecast5Tests.swift */; };
@@ -36,7 +36,7 @@
 /* Begin PBXFileReference section */
 		B4845A682B4F606C00E8FE55 /* SwiftCityForecast5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftCityForecast5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4845A6B2B4F606C00E8FE55 /* SwiftCityForecast5App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftCityForecast5App.swift; sourceTree = "<group>"; };
-		B4845A6D2B4F606C00E8FE55 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B4845A6D2B4F606C00E8FE55 /* ForecastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastView.swift; sourceTree = "<group>"; };
 		B4845A6F2B4F606F00E8FE55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4845A722B4F606F00E8FE55 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B4845A782B4F606F00E8FE55 /* SwiftCityForecast5Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftCityForecast5Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,9 +94,11 @@
 		B4845A6A2B4F606C00E8FE55 /* SwiftCityForecast5 */ = {
 			isa = PBXGroup;
 			children = (
-				B4845A6B2B4F606C00E8FE55 /* SwiftCityForecast5App.swift */,
-				B4845A6D2B4F606C00E8FE55 /* ContentView.swift */,
-				B4845A6F2B4F606F00E8FE55 /* Assets.xcassets */,
+				B4845A952B4F607E00E8FE55 /* App */,
+				B4845A992B4F662C00E8FE55 /* Base */,
+				B4845A9A2B4F664400E8FE55 /* Features */,
+				B4845A972B4F638300E8FE55 /* Resources */,
+				B4845A982B4F638900E8FE55 /* Sources */,
 				B4845A712B4F606F00E8FE55 /* Preview Content */,
 			);
 			path = SwiftCityForecast5;
@@ -125,6 +127,68 @@
 				B4845A882B4F606F00E8FE55 /* SwiftCityForecast5UITestsLaunchTests.swift */,
 			);
 			path = SwiftCityForecast5UITests;
+			sourceTree = "<group>";
+		};
+		B4845A952B4F607E00E8FE55 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B4845A6B2B4F606C00E8FE55 /* SwiftCityForecast5App.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		B4845A962B4F608600E8FE55 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		B4845A972B4F638300E8FE55 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B4845A6F2B4F606F00E8FE55 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B4845A982B4F638900E8FE55 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				B4845A962B4F608600E8FE55 /* Components */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		B4845A992B4F662C00E8FE55 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		B4845A9A2B4F664400E8FE55 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				B4845A9B2B4F671A00E8FE55 /* Weather */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		B4845A9B2B4F671A00E8FE55 /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				B4845A9D2B4F673900E8FE55 /* View */,
+			);
+			path = Weather;
+			sourceTree = "<group>";
+		};
+		B4845A9D2B4F673900E8FE55 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B4845A6D2B4F606C00E8FE55 /* ForecastView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +321,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4845A6E2B4F606C00E8FE55 /* ContentView.swift in Sources */,
+				B4845A6E2B4F606C00E8FE55 /* ForecastView.swift in Sources */,
 				B4845A6C2B4F606C00E8FE55 /* SwiftCityForecast5App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
