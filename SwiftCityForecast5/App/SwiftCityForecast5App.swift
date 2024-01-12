@@ -11,7 +11,7 @@ import SwiftUI
 struct SwiftCityForecast5App: App {
     var body: some Scene {
         WindowGroup {
-            ForecastView()
+            MainForecastView()
         }
     }
 }

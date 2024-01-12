@@ -1,5 +1,5 @@
 //
-//  SingleDayForecastView.swift
+//  DayForecastView.swift
 //  SwiftCityForecast5
 //
 //  Created by Sergio Herrera on 1/10/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SingleDayForecastView: View {
+struct DayForecastView: View {
     let day: String
     let image: String
     let temperature: Int
@@ -18,11 +18,7 @@ struct SingleDayForecastView: View {
                 .font(.system(size: 20, weight: .medium))
                 .foregroundStyle(.white)
             
-            Image(systemName: image)
-                .renderingMode(.original)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 50, height: 50)
+            WeatherImageView(image: image, sideLength: 50)
             
             Text("\(temperature)°")
                 .font(.system(size: 35, weight: .semibold))
@@ -32,5 +28,8 @@ struct SingleDayForecastView: View {
 }
 
 #Preview {
-    SingleDayForecastView(day: "THU", image: "cloud.sun.fill", temperature: 76)
+    ZStack {
+        Color.blue
+        DayForecastView(day: "THU", image: "cloud.sun.fill", temperature: 76)
+    }
 }

@@ -1,5 +1,5 @@
 //
-//  BackgroundView.swift
+//  BackgroundGradientView.swift
 //  SwiftCityForecast5
 //
 //  Created by Sergio Herrera on 1/10/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct BackgroundView: View {
+struct BackgroundGradientView: View {
     let topColor: Color
     let bottomColor: Color
     
@@ -18,5 +18,5 @@ struct BackgroundView: View {
 }
 
 #Preview {
-    BackgroundView(topColor: .blue, bottomColor: Color.lightBlue)
+    BackgroundGradientView(topColor: .blue, bottomColor: Color.lightBlue)
 }

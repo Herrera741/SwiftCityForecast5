@@ -1,5 +1,5 @@
 //
-//  WeatherView.swift
+//  MainForecastView.swift
 //  SwiftCityForecast5
 //
 //  Created by Sergio Herrera on 1/10/24.
@@ -7,10 +7,12 @@
 
 import SwiftUI
 
-struct ForecastView: View {
+struct MainForecastView: View {
+    var isTimeNow = true
+    
     var body: some View {
         ZStack {
-            BackgroundView(topColor: .blue, bottomColor: Color.lightBlue)
+            BackgroundGradientView(topColor: .blue, bottomColor: Color.lightBlue)
             
             VStack {
                 VStack(spacing: 10) {
@@ -38,28 +40,37 @@ struct ForecastView: View {
                     }
                     
                     VStack(spacing: 5) {
-                        Image(systemName: "cloud.sun.fill")
-                            .renderingMode(.original)
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 100, height: 100)
+                        WeatherImageView(
+                            image: "cloud.sun.fill",
+                            sideLength: 100)
                         
                         Text("76°")
                             .font(.system(size: 50, weight: .semibold))
                             .foregroundStyle(.white)
                     }
                     
-                    Button {
-                        // change time within day
-                    } label: {
-                        Image(systemName: "clock.arrow.circlepath")
-                            .resizable()
+                    VStack {
+                        Button {
+                            // change time forward within day
+                        } label: {
+                            WeatherImageView(
+                                image: "clock.arrow.circlepath",
+                                sideLength: 50)
                             .scaleEffect(x: -1, y: 1)
-                            .aspectRatio(contentMode: .fit)
                             .foregroundStyle(.yellow)
-                            .frame(width: 50, height: 50)
                             .shadow(radius: 1, x: 2, y: 1)
-                    }
+                        }
+                        
+                        Button {
+                            // change time back to now within day
+                        } label: {
+                            WeatherImageView(
+                                image: "arrowshape.turn.up.backward.badge.clock.fill",
+                                sideLength: 50)
+                            .foregroundStyle(isTimeNow ? .yellow.opacity(0.3) : .yellow)
+                        }
+                        .disabled(isTimeNow)
+                    } // end VStack
                 } // end HStack
                 .padding(.bottom, 30)
                 
@@ -70,47 +81,39 @@ struct ForecastView: View {
                         .foregroundStyle(.white)
                     
                     HStack(spacing: 20) {
-                        SingleDayForecastView(day: "WED",
+                        DayForecastView(day: "THU",
                                               image: "cloud.sun.fill",
                                               temperature: 76)
                         
-                        SingleDayForecastView(day: "THU",
+                        DayForecastView(day: "FRI",
                                               image: "cloud.sun.fill",
                                               temperature: 76)
                         
-                        SingleDayForecastView(day: "FRI",
+                        DayForecastView(day: "SAT",
                                               image: "cloud.sun.fill",
                                               temperature: 76)
                         
-                        SingleDayForecastView(day: "SAT",
+                        DayForecastView(day: "SUN",
                                               image: "cloud.sun.fill",
                                               temperature: 76)
                         
-                        SingleDayForecastView(day: "SUN",
+                        DayForecastView(day: "MON",
                                               image: "cloud.sun.fill",
                                               temperature: 76)
                     } // end HStack
                     .padding(.bottom, 40)
                 } // end VStack
                 
-                Button {
-                    // do something
-                } label: {
-                    Text("Change City")
-                        .font(.headline)
-                        .fontWeight(.semibold)
-                        .foregroundStyle(.white)
-                        .frame(width: 280, height: 55)
-                        .background(.blue)
-                        .clipShape(
-                            RoundedRectangle(cornerRadius: 10)
-                        )
-                }
+                
+                CustomButton(action: {
+                    print("showing change city sheet")
+                }, 
+                    text: "Change City")
             } // end VStack
         } // end ZStack
     }
 }
 
 #Preview {
-    ForecastView()
+    MainForecastView()
 }
