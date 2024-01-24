@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+struct CityWeatherForecast {
+    let cityName: String
+    let currentDate: String
+    let weatherCode: String
+    let currentTemp: String
+    let forecastTemps = [String]()
+}
