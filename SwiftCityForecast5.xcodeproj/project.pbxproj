@@ -7,10 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B4006FA62B5E6B7100E203B1 /* WeatherDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4006FA52B5E6B7100E203B1 /* WeatherDataService.swift */; };
+		B4006FA92B5E6EA500E203B1 /* APIKeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4006FA82B5E6EA500E203B1 /* APIKeyManager.swift */; };
+		B4006FAD2B5E6F5D00E203B1 /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4006FAC2B5E6F5D00E203B1 /* WeatherViewModel.swift */; };
+		B4006FAF2B5E706900E203B1 /* RealtimeWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4006FAE2B5E706900E203B1 /* RealtimeWeather.swift */; };
+		B4006FB12B5E754100E203B1 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4006FB02B5E754100E203B1 /* Forecast.swift */; };
+		B4006FB32B5F901100E203B1 /* CityWeatherForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4006FB22B5F901100E203B1 /* CityWeatherForecast.swift */; };
+		B4006FB52B5F917E00E203B1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4006FB42B5F917E00E203B1 /* GoogleService-Info.plist */; };
+		B4006FB92B5F93C300E203B1 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = B4006FB82B5F93C300E203B1 /* FirebaseFirestore */; };
+		B4006FBB2B5F93C300E203B1 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B4006FBA2B5F93C300E203B1 /* FirebaseFirestoreSwift */; };
 		B439804B2B50B8EF000FB37B /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B439804A2B50B8EF000FB37B /* CustomButton.swift */; };
 		B439804D2B50BEE8000FB37B /* WeatherImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B439804C2B50BEE8000FB37B /* WeatherImageView.swift */; };
 		B4845A6C2B4F606C00E8FE55 /* SwiftCityForecast5App.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4845A6B2B4F606C00E8FE55 /* SwiftCityForecast5App.swift */; };
-		B4845A6E2B4F606C00E8FE55 /* MainForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4845A6D2B4F606C00E8FE55 /* MainForecastView.swift */; };
+		B4845A6E2B4F606C00E8FE55 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4845A6D2B4F606C00E8FE55 /* HomeView.swift */; };
 		B4845A702B4F606F00E8FE55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4845A6F2B4F606F00E8FE55 /* Assets.xcassets */; };
 		B4845A732B4F606F00E8FE55 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4845A722B4F606F00E8FE55 /* Preview Assets.xcassets */; };
 		B4845A7D2B4F606F00E8FE55 /* SwiftCityForecast5Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4845A7C2B4F606F00E8FE55 /* SwiftCityForecast5Tests.swift */; };
@@ -38,11 +47,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B4006FA52B5E6B7100E203B1 /* WeatherDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataService.swift; sourceTree = "<group>"; };
+		B4006FA82B5E6EA500E203B1 /* APIKeyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeyManager.swift; sourceTree = "<group>"; };
+		B4006FAC2B5E6F5D00E203B1 /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
+		B4006FAE2B5E706900E203B1 /* RealtimeWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealtimeWeather.swift; sourceTree = "<group>"; };
+		B4006FB02B5E754100E203B1 /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
+		B4006FB22B5F901100E203B1 /* CityWeatherForecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityWeatherForecast.swift; sourceTree = "<group>"; };
+		B4006FB42B5F917E00E203B1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		B439804A2B50B8EF000FB37B /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		B439804C2B50BEE8000FB37B /* WeatherImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherImageView.swift; sourceTree = "<group>"; };
 		B4845A682B4F606C00E8FE55 /* SwiftCityForecast5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftCityForecast5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4845A6B2B4F606C00E8FE55 /* SwiftCityForecast5App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftCityForecast5App.swift; sourceTree = "<group>"; };
-		B4845A6D2B4F606C00E8FE55 /* MainForecastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainForecastView.swift; sourceTree = "<group>"; };
+		B4845A6D2B4F606C00E8FE55 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		B4845A6F2B4F606F00E8FE55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4845A722B4F606F00E8FE55 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B4845A782B4F606F00E8FE55 /* SwiftCityForecast5Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftCityForecast5Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,6 +75,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4006FB92B5F93C300E203B1 /* FirebaseFirestore in Frameworks */,
+				B4006FBB2B5F93C300E203B1 /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +97,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B4006FA42B5E6B4B00E203B1 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				B4006FA52B5E6B7100E203B1 /* WeatherDataService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		B4006FA72B5E6E9600E203B1 /* KeyManager */ = {
+			isa = PBXGroup;
+			children = (
+				B4006FA82B5E6EA500E203B1 /* APIKeyManager.swift */,
+			);
+			path = KeyManager;
+			sourceTree = "<group>";
+		};
+		B4006FAA2B5E6F2900E203B1 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B4006FAC2B5E6F5D00E203B1 /* WeatherViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B4006FAB2B5E6F3900E203B1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B4006FAE2B5E706900E203B1 /* RealtimeWeather.swift */,
+				B4006FB02B5E754100E203B1 /* Forecast.swift */,
+				B4006FB22B5F901100E203B1 /* CityWeatherForecast.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B4006FB72B5F93C300E203B1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B4845A5F2B4F606B00E8FE55 = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +145,7 @@
 				B4845A7B2B4F606F00E8FE55 /* SwiftCityForecast5Tests */,
 				B4845A852B4F606F00E8FE55 /* SwiftCityForecast5UITests */,
 				B4845A692B4F606C00E8FE55 /* Products */,
+				B4006FB72B5F93C300E203B1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -141,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				B4845A6B2B4F606C00E8FE55 /* SwiftCityForecast5App.swift */,
+				B4006FB42B5F917E00E203B1 /* GoogleService-Info.plist */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -180,27 +241,31 @@
 		B4845A9A2B4F664400E8FE55 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				B4845A9B2B4F671A00E8FE55 /* Forecast */,
+				B4006FA72B5E6E9600E203B1 /* KeyManager */,
+				B4006FA42B5E6B4B00E203B1 /* Service */,
+				B4845A9B2B4F671A00E8FE55 /* Weather */,
 			);
 			path = Features;
 			sourceTree = "<group>";
 		};
-		B4845A9B2B4F671A00E8FE55 /* Forecast */ = {
+		B4845A9B2B4F671A00E8FE55 /* Weather */ = {
 			isa = PBXGroup;
 			children = (
-				B4845A9D2B4F673900E8FE55 /* View */,
+				B4006FAB2B5E6F3900E203B1 /* Models */,
+				B4845A9D2B4F673900E8FE55 /* Views */,
+				B4006FAA2B5E6F2900E203B1 /* ViewModels */,
 			);
-			path = Forecast;
+			path = Weather;
 			sourceTree = "<group>";
 		};
-		B4845A9D2B4F673900E8FE55 /* View */ = {
+		B4845A9D2B4F673900E8FE55 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B4845A6D2B4F606C00E8FE55 /* MainForecastView.swift */,
+				B4845A6D2B4F606C00E8FE55 /* HomeView.swift */,
 				B4845AA12B4F8B7200E8FE55 /* DayForecastView.swift */,
 				B439804C2B50BEE8000FB37B /* WeatherImageView.swift */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +284,10 @@
 			dependencies = (
 			);
 			name = SwiftCityForecast5;
+			packageProductDependencies = (
+				B4006FB82B5F93C300E203B1 /* FirebaseFirestore */,
+				B4006FBA2B5F93C300E203B1 /* FirebaseFirestoreSwift */,
+			);
 			productName = SwiftCityForecast5;
 			productReference = B4845A682B4F606C00E8FE55 /* SwiftCityForecast5.app */;
 			productType = "com.apple.product-type.application";
@@ -291,6 +360,9 @@
 				Base,
 			);
 			mainGroup = B4845A5F2B4F606B00E8FE55;
+			packageReferences = (
+				B4006FB62B5F91FB00E203B1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = B4845A692B4F606C00E8FE55 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -309,6 +381,7 @@
 			files = (
 				B4845A732B4F606F00E8FE55 /* Preview Assets.xcassets in Resources */,
 				B4845A702B4F606F00E8FE55 /* Assets.xcassets in Resources */,
+				B4006FB52B5F917E00E203B1 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,12 +406,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4006FB32B5F901100E203B1 /* CityWeatherForecast.swift in Sources */,
 				B4845AA22B4F8B7200E8FE55 /* DayForecastView.swift in Sources */,
+				B4006FAD2B5E6F5D00E203B1 /* WeatherViewModel.swift in Sources */,
+				B4006FB12B5E754100E203B1 /* Forecast.swift in Sources */,
 				B439804D2B50BEE8000FB37B /* WeatherImageView.swift in Sources */,
 				B4845AA02B4F802E00E8FE55 /* BackgroundGradientView.swift in Sources */,
-				B4845A6E2B4F606C00E8FE55 /* MainForecastView.swift in Sources */,
+				B4845A6E2B4F606C00E8FE55 /* HomeView.swift in Sources */,
+				B4006FA92B5E6EA500E203B1 /* APIKeyManager.swift in Sources */,
 				B4845A6C2B4F606C00E8FE55 /* SwiftCityForecast5App.swift in Sources */,
 				B439804B2B50B8EF000FB37B /* CustomButton.swift in Sources */,
+				B4006FA62B5E6B7100E203B1 /* WeatherDataService.swift in Sources */,
+				B4006FAF2B5E706900E203B1 /* RealtimeWeather.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -668,6 +747,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B4006FB62B5F91FB00E203B1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.20.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B4006FB82B5F93C300E203B1 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B4006FB62B5F91FB00E203B1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		B4006FBA2B5F93C300E203B1 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B4006FB62B5F91FB00E203B1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B4845A602B4F606C00E8FE55 /* Project object */;
 }

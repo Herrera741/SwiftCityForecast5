@@ -1,5 +1,5 @@
 //
-//  MainForecastView.swift
+//  MainView.swift
 //  SwiftCityForecast5
 //
 //  Created by Sergio Herrera on 1/10/24.
@@ -7,7 +7,32 @@
 
 import SwiftUI
 
-struct MainForecastView: View {
+struct GithubUser: Codable {
+    var avatarUrl: String
+    var login: String
+    var company: String
+    var bio: String
+}
+
+final class WeatherViewModel: ObservableObject {
+    @Published var user: GithubUser?
+    let forecastService = WeatherDataService()
+    let keyManager = 
+    
+    init() {
+        Task { try await fetchWeatherData() }
+    }
+    
+    @MainActor
+    func fetchWeatherData() async throws {
+        self.user = await forecastService.fetchData()
+        print("DEBUG: user from service = \(self.user)")
+    }
+    
+}
+
+struct HomeView: View {
+    @StateObject var weatherVM = WeatherViewModel()
     var isTimeNow = true
     
     var body: some View {
@@ -16,7 +41,7 @@ struct MainForecastView: View {
             
             VStack {
                 VStack(spacing: 10) {
-                    Text("Los Angeles, CA")
+                    Text(weatherVM.user?.login ?? "Los Angeles")
                         .font(.system(size: 30, weight: .bold))
                         .foregroundStyle(.white)
                     
@@ -65,9 +90,9 @@ struct MainForecastView: View {
                             // change time back to now within day
                         } label: {
                             WeatherImageView(
-                                image: "arrowshape.turn.up.backward.badge.clock.fill",
+                                image: "exclamationmark.applewatch",
                                 sideLength: 50)
-                            .foregroundStyle(isTimeNow ? .yellow.opacity(0.3) : .yellow)
+                            .foregroundStyle(isTimeNow ? .yellow.opacity(0.5) : .yellow)
                         }
                         .disabled(isTimeNow)
                     } // end VStack
@@ -104,7 +129,6 @@ struct MainForecastView: View {
                     .padding(.bottom, 40)
                 } // end VStack
                 
-                
                 CustomButton(action: {
                     print("showing change city sheet")
                 }, 
@@ -115,5 +139,5 @@ struct MainForecastView: View {
 }
 
 #Preview {
-    MainForecastView()
+    HomeView()
 }
