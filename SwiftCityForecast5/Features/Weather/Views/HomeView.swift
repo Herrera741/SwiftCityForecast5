@@ -7,30 +7,6 @@
 
 import SwiftUI
 
-struct GithubUser: Codable {
-    var avatarUrl: String
-    var login: String
-    var company: String
-    var bio: String
-}
-
-final class WeatherViewModel: ObservableObject {
-    @Published var user: GithubUser?
-    let forecastService = WeatherDataService()
-    let keyManager = 
-    
-    init() {
-        Task { try await fetchWeatherData() }
-    }
-    
-    @MainActor
-    func fetchWeatherData() async throws {
-        self.user = await forecastService.fetchData()
-        print("DEBUG: user from service = \(self.user)")
-    }
-    
-}
-
 struct HomeView: View {
     @StateObject var weatherVM = WeatherViewModel()
     var isTimeNow = true
@@ -38,22 +14,16 @@ struct HomeView: View {
     var body: some View {
         ZStack {
             BackgroundGradientView(topColor: .blue, bottomColor: Color.lightBlue)
-            
-            VStack {
+
+            VStack(spacing: 30) {
                 VStack(spacing: 10) {
-                    Text(weatherVM.user?.login ?? "Los Angeles")
-                        .font(.system(size: 30, weight: .bold))
+                    Text(weatherVM.cityWeatherForecast?.cityName ?? "Los Angeles")
+                        .font(.system(size: 40, weight: .bold))
                         .foregroundStyle(.white)
                     
-                    HStack(spacing: 10) {
-                        Text("Wednesday")
-                            .font(.system(size: 15, weight: .semibold))
-                            .foregroundStyle(.white)
-                        
-                        Text("Jan 10, 2023")
-                            .font(.system(size: 15, weight: .semibold))
-                            .foregroundStyle(.white)
-                    }
+                    Text(weatherVM.cityWeatherForecast?.currentDate ?? "Today")
+                        .font(.system(size: 15, weight: .semibold))
+                        .foregroundStyle(.white)
                 }
                 .padding(.bottom, 25)
                 
@@ -69,7 +39,7 @@ struct HomeView: View {
                             image: "cloud.sun.fill",
                             sideLength: 100)
                         
-                        Text("76°")
+                        Text(weatherVM.cityWeatherForecast?.currentTemp ?? "77°")
                             .font(.system(size: 50, weight: .semibold))
                             .foregroundStyle(.white)
                     }
@@ -82,12 +52,11 @@ struct HomeView: View {
                                 image: "clock.arrow.circlepath",
                                 sideLength: 50)
                             .scaleEffect(x: -1, y: 1)
-                            .foregroundStyle(.yellow)
-                            .shadow(radius: 1, x: 2, y: 1)
+                            .foregroundStyle(!isTimeNow ? .yellow.opacity(0.5) : .yellow)
                         }
                         
                         Button {
-                            // change time back to now within day
+                            // change time backward to now
                         } label: {
                             WeatherImageView(
                                 image: "exclamationmark.applewatch",
@@ -128,12 +97,13 @@ struct HomeView: View {
                     } // end HStack
                     .padding(.bottom, 40)
                 } // end VStack
-                
-                CustomButton(action: {
-                    print("showing change city sheet")
-                }, 
-                    text: "Change City")
+//                
+//                CustomButton(action: {
+//                    print("showing change city sheet")
+//                }, 
+//                    text: "Change City")
             } // end VStack
+            .padding(.horizontal, 10)
         } // end ZStack
     }
 }
